@@ -1,0 +1,28 @@
+# OSM highway 类型 → 步行耗时乘数
+# 乘数 < 1.0 = 优先选择（如步行街、主干道人行道）
+# 乘数 > 1.0 = 尽量避免（如台阶、未铺装小路）
+# 未列出的类型默认为 1.0
+# 格式: way_type = 乘数
+
+motorway       = 10.0   # 高速公路，不可步行（极端惩罚）
+motorway_link  = 10.0   # 高速匝道
+trunk          = 5.0    # 准高速/国道，步行危险
+trunk_link     = 5.0
+primary        = 1.5    # 主干道，车多
+primary_link   = 1.5
+secondary      = 1.2    # 次干道
+secondary_link = 1.2
+tertiary       = 1.1    # 支路
+tertiary_link  = 1.1
+residential    = 1.0    # 居民区道路（基准）
+living_street  = 0.9    # 生活街道，适合步行
+pedestrian     = 0.8    # 步行街，首选
+footway        = 0.9    # 人行道
+path           = 1.0    # 小径
+cycleway       = 1.0    # 自行车道
+steps          = 2.0    # 台阶，费力
+bridleway      = 1.3    # 马道
+track          = 1.2    # 未铺装小路
+service        = 1.0    # 服务道路
+unclassified   = 1.0    # 未分类道路
+road           = 1.0    # 道路（类型不明）

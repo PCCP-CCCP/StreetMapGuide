@@ -9,9 +9,32 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <!-- 建议改成你本机已安装的 LTS 版本，如 17 或 21 -->
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>dsol</id>
+            <url>https://simulation.tudelft.nl/dsol/repo</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>nl.tudelft.simulation</groupId>
+            <artifactId>dsol-animation-gis-osm</artifactId>
+            <version>4.2.2</version>
+        </dependency>
+        <!-- osmpbf 底层解析库（显式声明为 compile scope） -->
+        <dependency>
+            <groupId>org.openstreetmap.pbf</groupId>
+            <artifactId>osmpbf</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+        <!-- 如果你还需要其他依赖，可以继续在这里添加 -->
+    </dependencies>
 
 </project>
